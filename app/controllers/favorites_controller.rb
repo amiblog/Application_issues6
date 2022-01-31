@@ -5,6 +5,7 @@ class FavoritesController < ApplicationController
     favorite.save
     #redirect_to request.referer
     @book = Book.find(params[:book_id])
+    #@books = Book.all
   end
 
   def destroy
@@ -13,5 +14,6 @@ class FavoritesController < ApplicationController
     favorite.destroy
     #redirect_to request.referer
     @book = Book.find(params[:book_id])
+    #@books = Book.all
   end
 end
